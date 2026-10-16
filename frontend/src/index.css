@@ -1,0 +1,103 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #f4f4f5;
+}
+
+.calculator {
+  max-width: 360px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #f4f4f5;
+  border: 2px solid #d4d4d8;
+  border-radius: 10px;
+}
+
+.display:focus-within {
+  border-color: #4f6696;
+}
+
+.display input {
+  min-width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.display-op {
+  font-size: 1.5rem;
+  color: #4f6696;
+  text-align: left;
+}
+
+.display-result {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.keypad button {
+  font-size: 1.2rem;
+  padding: 0.9rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.keypad button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.keypad .active {
+  background: #4f6696;
+  color: white;
+  border-color: #4f6696;
+}
+
+.keypad .clear {
+  background: #e4e4e7;
+}
+
+.keypad .equals {
+  background: #4f6696;
+  color: white;
+  border-color: #4f6696;
+}
+
+.error {
+  color: #ad1212;
+}
+
+.result {
+  font-size: 2rem;
+  text-align: right;
+  margin: 0.5rem 0 0;
+}
