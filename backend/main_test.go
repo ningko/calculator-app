@@ -22,7 +22,7 @@ func TestCalculate(t *testing.T) {
 		{"divide", `{"operation":"divide", "a":12, "b":3}`, http.StatusOK, 4, ""},
 		{"power", `{"operation":"power", "a":2, "b":3}`, http.StatusOK, 8, ""},
 		{"sqrt", `{"operation":"sqrt", "a":4}`, http.StatusOK, 2, ""},
-		{"percent", `{"operation":"percent", "a": 50, "b": 10}`, http.StatusOK, 0.2, ""},
+		{"percent", `{"operation":"percent", "a": 50, "b": 10}`, http.StatusOK, 5, ""},
 		{"unknown operation", `{"operation":"asdasd", "a":2, "b":3}`, http.StatusBadRequest, 0, "unknown operation"},
 		{"invalid json", `asdasd`, http.StatusBadRequest, 0, "invalid JSON"},
 		{"div by zero", `{"operation":"divide", "a":2, "b":0}`, http.StatusBadRequest, 0, "division by zero"},
