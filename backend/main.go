@@ -25,6 +25,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("POST /api/calculate", calculate)
+	mux.Handle("GET /", http.FileServer(http.Dir("static")))
 
 	fmt.Println("listening on port 8080")
 	http.ListenAndServe(":8080", mux)
