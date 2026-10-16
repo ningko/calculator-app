@@ -1,10 +1,7 @@
-function App() {
+import Calculator from "./components/Calculator"
 
-  return (
-    <>
-      <h1>Calculator</h1>
-    </>
-  )
+function App() {
+  return <Calculator/>
 }
 
 export default App
